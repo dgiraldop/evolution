@@ -1,27 +1,14 @@
--- MySQL dump 10.13  Distrib 5.6.15, for osx10.9 (x86_64)
---
--- Host: localhost    Database: cake_me
--- ------------------------------------------------------
--- Server version	5.6.15
+﻿# Host: localhost  (Version: 5.5.16)
+# Date: 2014-02-13 17:37:02
+# Generator: MySQL-Front 5.3  (Build 4.52)
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `tasks`
---
+#
+# Structure for table "tasks"
+#
 
 DROP TABLE IF EXISTS `tasks`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tasks` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(150) DEFAULT NULL,
@@ -31,26 +18,30 @@ CREATE TABLE `tasks` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `tasks`
---
+#
+# Data for table "tasks"
+#
 
-LOCK TABLES `tasks` WRITE;
-/*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
-INSERT INTO `tasks` VALUES (16,'jhon henry','quintero c','2010-10-10',NULL,'2014-02-12 22:16:43','2014-02-12 22:16:43'),(18,'andres','quintero','2020-12-12',NULL,'2014-02-12 22:50:21','2014-02-12 22:50:21');
-/*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+INSERT INTO `tasks` VALUES (16,'jhon henry tales','quintero cardenas','2010-10-10',NULL,'2014-02-12 22:16:43','2014-02-12 22:16:43'),(18,'andres','quintero','2020-12-12',NULL,'2014-02-12 22:50:21','2014-02-12 22:50:21'),(20,'nuevo','nuevo','0000-00-00',NULL,'2014-02-13 17:12:09','2014-02-13 17:12:09'),(21,'nuevo tales','nuevo','0000-00-00',NULL,'2014-02-13 17:12:18','2014-02-13 17:12:18'),(22,'nuevo','tales','0000-00-00',NULL,'2014-02-13 19:15:28','2014-02-13 19:15:28'),(23,'new','tales','0000-00-00',NULL,'2014-02-13 22:56:27','2014-02-13 22:56:27'),(24,'otra prueba','tales','2001-12-12',NULL,'2014-02-13 23:03:12','2014-02-13 23:03:12'),(25,'diego','giraldo','1212-12-12',NULL,'2014-02-13 23:13:09','2014-02-13 23:13:09'),(26,'modal','modal','0000-00-00',NULL,'2014-02-13 23:16:41','2014-02-13 23:16:41'),(27,'new','newnewnew','2012-11-11',NULL,'2014-02-13 23:26:37','2014-02-13 23:26:37'),(28,'nuevo prueba','high','2012-01-01',NULL,'2014-02-13 23:27:48','2014-02-13 23:27:48');
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+#
+# Structure for table "users"
+#
 
--- Dump completed on 2014-02-12 23:05:20
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(32) NOT NULL,
+  `email` varchar(32) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
+
+#
+# Data for table "users"
+#
+
+INSERT INTO `users` VALUES (58,'username','email@email.com','password','2014-02-12 18:23:46'),(59,'username','email@email.com','password','2014-02-12 18:23:50'),(60,'username','email@email.com','password','2014-02-12 18:23:52'),(61,'dgiraldop','dgiraldop@gmail.com','8cb2237d0679ca88db6464eac60da963','2014-02-13 16:25:41'),(62,'username123456','dgiraldop@gmail.com','123456','2014-02-13 19:57:05');
